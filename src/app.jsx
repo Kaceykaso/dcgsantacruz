@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { Button, Counter, Frame, GroupBox, MenuList, MenuListItem, ScrollView, Separator, styleReset, Toolbar, Window, WindowContent, WindowHeader } from 'react95'
+import { Button, Frame, GroupBox, styleReset, Toolbar, Window, WindowContent, WindowHeader } from 'react95'
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 
 import { NavBar } from './components/navbar';
