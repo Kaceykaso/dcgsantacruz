@@ -1,9 +1,22 @@
-import React, {useState} from 'react'
-import { Button, Frame, GroupBox, styleReset, Toolbar, Window, WindowContent, WindowHeader } from 'react95'
-import { createGlobalStyle, ThemeProvider } from 'styled-components'
-
-import { NavBar } from './components/navbar';
-import { FunCounter } from './components/FunCounter';
+import React, {useState} from 'react';
+import { 
+    Anchor,
+    AppBar, 
+    Button, 
+    Counter,  
+    Frame, 
+    GroupBox, 
+    MenuList, 
+    MenuListItem, 
+    Separator, 
+    styleReset, 
+    Toolbar, 
+    TextInput, 
+    Window, 
+    WindowContent, 
+    WindowHeader 
+  } from 'react95';
+import { createGlobalStyle, ThemeProvider } from 'styled-components';
 
 /* Pick a theme of your choice */
 import vaporTeal from 'react95/dist/themes/vaporTeal';
@@ -57,12 +70,81 @@ const GlobalStyles = createGlobalStyle`
   }
 `;
 
+function NavBar() {
+    const [open, setOpen] = useState(false);
+
+    return (
+        <AppBar>
+            <Toolbar style={{ justifyContent: 'space-between' }}>
+                <div style={{ position: 'relative', display: 'inline-block' }}>
+                    <Button
+                        onClick={() => setOpen(!open)}
+                        active={open}
+                        style={{ fontWeight: 'bold' }}
+                    >
+                    <img
+                    src=''
+                    alt=''
+                    style={{ height: '20px', marginRight: 4 }}
+                    />
+                        Start
+                    </Button>
+                    {open && (
+                        <MenuList
+                        style={{
+                            position: 'absolute',
+                            left: '0',
+                            top: '100%'
+                        }}
+                            onClick={() => setOpen(false)}
+                        >
+                            <MenuListItem>
+                                <span role='img' aria-label='👨‍💻'>
+                                👨‍💻 Profile
+                                </span>
+                            </MenuListItem>
+                            <MenuListItem>
+                                <span role='img' aria-label='📁'>
+                                📁
+                                </span>
+                            My account
+                            </MenuListItem>
+                            <Separator />
+                            <MenuListItem disabled>
+                                <span role='img' aria-label='🔙'>
+                                    🔙
+                                </span>
+                                Logout
+                            </MenuListItem>
+                        </MenuList>
+                    )}
+                </div>
+                <TextInput placeholder='Search...' width={150} />
+            </Toolbar>
+        </AppBar>
+    );
+}
+
+function FunCounter() {
+    const [ count, setCount ] = useState(0);
+    const handleCountClick = () => setCount(count + 1);
+
+    return (
+        <Frame className="counter">
+            <Counter value={831} minLength={5} size='lg' />
+            <div className='interactive-counter'>
+                <Counter value={count} minLength={3} />
+                <Button onClick={handleCountClick}>Click!</Button>
+            </div>
+        </Frame>
+    )
+}
 
 const App = () => (
   <div>
     <GlobalStyles />
     <ThemeProvider theme={vaporTeal}>
-      <NavBar theme={vaporTeal} />
+      <NavBar />
       <Window  resizable className='window'>
         <WindowHeader className='window-title'>
             <span>DCG-Santa-Cruz.exe</span>
@@ -80,7 +162,7 @@ const App = () => (
         </Toolbar>
         <WindowContent>
           <GroupBox label='Welcome to DCG Santa Cruz'>
-              Formerly DC831 and now under new management, our goal is to bring DEF CON mindset and unite ethical hackers year round.
+              Formerly DC831 and now under new management, our goal is to bring a DEF CON mindset and unite ethical hackers year round.
             </GroupBox>
             <br />
             <GroupBox label='Our Mission'>
@@ -90,12 +172,13 @@ const App = () => (
             </GroupBox>
             <br />
             <GroupBox label='Join Us'>
-              We are looking to meet monthly for 1 hour, once we narrow down a meet space and a schedule.
-              We are just getting started, but if this sounds like your jam - sign up and we will be in touch!
+              Interested in joining our band of merry hackers?
+              <br /><br />
+              <Anchor href="https://forms.gle/piGX4aVSs5yKFpRc6" target="_blank">Let us know here</Anchor>.
             </GroupBox>
             <br />
            <Frame variant='well' className='footer'>
-              Just another DEF CON Group
+              Just another <Anchor href="https://forum.defcon.org/social-groups" target="_blank">DEF CON Group</Anchor>
            </Frame>
         </WindowContent>
       </Window>
