@@ -100,14 +100,13 @@ function NavBar() {
                         >
                             <MenuListItem>
                                 <span role='img' aria-label='👨‍💻'>
-                                👨‍💻 Profile
+                                👨‍💻 Made with
                                 </span>
                             </MenuListItem>
                             <MenuListItem>
                                 <span role='img' aria-label='📁'>
-                                📁
+                                📁 React95
                                 </span>
-                            My account
                             </MenuListItem>
                             <Separator />
                             <MenuListItem disabled>
