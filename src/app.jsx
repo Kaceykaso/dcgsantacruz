@@ -158,9 +158,7 @@ const App = () => (
       </Window>
       
       <FunCounter />
-      <Window className='logo-window'>
-        <Avatar noBorder size={150} src='/images/dcg_santa-cruz_logo.png' />
-      </Window>
+        <Avatar noBorder size={150} src='https://photos.app.goo.gl/iPDyx4hnkqoiJmyeA' />
     </ThemeProvider>
   </div>
 );
