@@ -18,6 +18,7 @@ import {
     WindowHeader 
   } from 'react95';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import logo from './images/dcg_santa-cruz_logo.png';
 
 /* Pick a theme of your choice */
 import vaporTeal from 'react95/dist/themes/vaporTeal';
@@ -99,12 +100,20 @@ function NavBar() {
     );
 }
 
+function LogoImage() {
+  return (
+    <Frame className='logo'>
+      <Avatar noBorder square size={150} src={logo} />
+    </Frame>
+  )
+}
+
 function FunCounter() {
     const [ count, setCount ] = useState(0);
     const handleCountClick = () => setCount(count + 1);
 
     return (
-        <Frame className="counter">
+        <Frame className='counter'>
             <Counter value={831} minLength={5} size='lg' />
             <div className='interactive-counter'>
                 <Counter value={count} minLength={3} />
@@ -156,9 +165,11 @@ const App = () => (
            </Frame>
         </WindowContent>
       </Window>
+      <div>
+        <LogoImage />
+        <FunCounter />
+      </div>
       
-      <FunCounter />
-        <Avatar noBorder size={150} src='https://photos.app.goo.gl/iPDyx4hnkqoiJmyeA' />
     </ThemeProvider>
   </div>
 );

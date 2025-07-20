@@ -1,7 +1,7 @@
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
   font-weight: 400;
+  line-height: 1.5;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -41,23 +41,34 @@ h1 {
   text-align: center;
 }
 .screen {
+  align-content: center;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
 }
 .window {
   min-height: 200px;
   width: 600px;
   z-index: 3;
 }
+.logo {
+  height: 155px;
+  left: 50px;
+  padding: 0 10px;
+  position: absolute;
+  top: -10px;
+  width: 175px;
+  z-index: 1;
+}
 .counter {
   display: flex;
   flex-flow: column;
-  margin: -20px 0 0 480px;
+  float: right;
+  margin: 20px auto 0;
   padding: 1rem;
   width: 230px;
+  z-index: 0;
 }
 .interactive-counter {
   display: flex;
@@ -69,18 +80,15 @@ h1 {
   margin-left: 0.5rem;
   height: 51px;
 }
-.logo-window {
-  z-index: 0;
-}
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  background-color: #1a1a1a;
+  cursor: pointer;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
+  padding: 0.6em 1.2em;
   transition: border-color 0.25s;
 }
 button:hover {
@@ -93,9 +101,7 @@ button:focus-visible {
 
 @media (min-width: 300px) and (max-width: 960px) {
   .window {
+    margin-top: 50px;
     width: 90vw;
-  }
-  .counter {
-    margin: auto;
   }
 }
