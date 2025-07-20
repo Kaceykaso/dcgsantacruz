@@ -42,32 +42,6 @@ const GlobalStyles = createGlobalStyle`
   body, input, select, textarea {
     font-family: 'ms_sans_serif';
   }
-  body {
-    background: rgb(0, 128, 128);
-  }
-  .window {
-    width: 500px;
-    min-height: 200px;
-    z-index: 3;
-  }
-  .counter {
-    display: flex;
-    flex-flow: column;
-    padding: 1rem;
-    margin: -20px 0 0 480px;
-    width: 230px;
-  }
-  .interactive-counter {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    margin: 1rem 1rem 0 1rem;
-  }
-
-  .interactive-counter button {
-    margin-left: 0.5rem;
-    height: 51px;
-  }
 `;
 
 function NavBar() {
@@ -140,7 +114,7 @@ function FunCounter() {
 }
 
 const App = () => (
-  <div>
+  <div className='screen'>
     <GlobalStyles />
     <ThemeProvider theme={vaporTeal}>
       <NavBar />
@@ -173,7 +147,7 @@ const App = () => (
             <GroupBox label='Join Us'>
               Interested in joining our band of merry hackers?
               <br /><br />
-              <Anchor href="https://forms.gle/piGX4aVSs5yKFpRc6" target="_blank">Let us know here</Anchor>.
+              <Anchor href="https://forms.gle/piGX4aVSs5yKFpRc6" target="_blank">Let us know here</Anchor>, or send us an <Anchor href="mailto:dcgsantacruzorg@gmail.com">email</Anchor>.
             </GroupBox>
             <br />
            <Frame variant='well' className='footer'>
