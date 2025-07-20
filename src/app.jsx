@@ -145,7 +145,9 @@ const App = () => (
         </Toolbar>
         <WindowContent>
           <GroupBox label='Welcome to DCG Santa Cruz'>
-              Formerly DC831 and now under new management, our goal is to bring a DEF CON mindset and unite ethical hackers year round.
+              Formerly DC831 and now under new management, this DEF CON Group's goal 
+              is to build a DEF CON mindset year round, uniting ethical hackers who may or may not frequent the larger 
+              DEF CON hacker conference annually in Las Vegas, NV.
             </GroupBox>
             <br />
             <GroupBox label='Our Mission'>
