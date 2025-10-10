@@ -159,7 +159,7 @@ const App = () => (
             <GroupBox label='Join Us'>
               Interested in joining our band of merry hackers?
               <br /><br />
-              <Anchor href="https://forms.gle/piGX4aVSs5yKFpRc6" target="_blank">Let us know here</Anchor>, or send us an <Anchor href="mailto:dcgsantacruzorg@gmail.com">email</Anchor>.
+              Check out our <Anchor href="https://discord.gg/EGGv2sHV" target="_blank">Discord</Anchor>, or send us an <Anchor href="mailto:dcgsantacruzorg@gmail.com">email</Anchor>.
             </GroupBox>
             <br />
            <Frame variant='well' className='footer'>
