@@ -13,7 +13,7 @@
     "vite": "^7.2.7"
   },
   "dependencies": {
-    "react": "^19.1.0",
+    "react": "^19.2.3",
     "react-dom": "^19.2.1",
     "react95": "^4.0.0",
     "styled-components": "^6.1.19"
