@@ -53,17 +53,12 @@ function NavBar() {
     return (
         <AppBar>
             <Toolbar style={{ justifyContent: 'space-between' }}>
-                <div style={{ position: 'relative', display: 'inline-block' }}>
+                <div style={{ position: 'relative', display: 'absolute' }}>
                     <Button
                         onClick={() => setOpen(!open)}
                         active={open}
                         style={{ fontWeight: 'bold' }}
                     >
-                    <img
-                    src=''
-                    alt=''
-                    style={{ height: '20px', marginRight: 4 }}
-                    />
                         Start
                     </Button>
                     {open && (
